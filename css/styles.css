@@ -1,15 +1,15 @@
 :root {
   --title-color: #2e2f42;
   --pr_brand-color: #4d5ae5;
-  /* --subtitle-color: ; */
   --text-color: #434455;
   --accent-color: #404bbf;
   --footer-color: #e7e9fc;
   --team-bgcolor: #f4f4fd;
   --wite-color: #fff;
+  --btn-hover: #404bbf;
 }
 body {
-  font-family: roboto, sans-serif;
+  font-family: 'roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -48,8 +48,8 @@ img {
   text-decoration: none;
   color: inherit;
 }
-link:hover,
-link:focus {
+.link:hover,
+.link:focus {
   color: var(--accent-color);
 }
 
@@ -76,8 +76,8 @@ link:focus {
   margin: -1px;
 }
 .button {
+  font-family: 'roboto', sans-serif;
   font-weight: 500;
-  /* display: flex; */
   align-items: center;
   letter-spacing: 0.04em;
   cursor: pointer;
@@ -86,8 +86,9 @@ link:focus {
 .section-title {
   font-size: 36px;
   line-height: 1.11;
+  color: var(--title-color);
   text-align: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .item-subtitle {
@@ -97,27 +98,20 @@ link:focus {
   margin-bottom: 8px;
   text-align: left;
   color: var(--title-color);
-  /* text-align: center; */
 }
 
 /* COMPONENTS====================================== */
 
 /* HEDER ========================================= */
 
-.page-heder {
-  /* padding-top: 24px;
-  padding-bottom: 24px; */
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
-
-  /* #e7e9fc; */
 }
 .page-header-container {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  border-bottom: 1px solid #e7e9fc;
 }
 
 /* PAGE-NAV =========================== */
@@ -129,14 +123,14 @@ link:focus {
 
 /* MENU ========================================= */
 
-.menu-link {
+.menu-list /*link*/ {
   font-weight: 500;
 }
 .menu-link:hover,
 .menu-link:focus {
   color: var(--accent-color);
 }
-.menu {
+.menu-list {
   display: flex;
   align-items: center;
 }
@@ -183,8 +177,8 @@ link:focus {
   margin-left: auto;
 }
 
-.mail {
-  margin-right: 40px;
+.contacts-item {
+  margin-left: 40px;
 }
 
 /* HERO ============================================== */
@@ -207,7 +201,7 @@ link:focus {
   color: var(--wite-color);
 }
 .hero-button {
-  color: #ffffff;
+  color: var(--wite-color);
   background: var(--pr_brand-color);
   padding: 16px 32px;
   margin-left: auto;
@@ -218,7 +212,7 @@ link:focus {
 }
 .hero-button:hover,
 .hero-button:focus {
-  color: var(--title-color);
+  background-color: var(--btn-hover);
 }
 
 /*  SECTION FEATURES ================================*/
@@ -234,9 +228,6 @@ link:focus {
 }
 .features-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
-}
-.features-text {
-  color: var(--text-color);
 }
 
 /* SECTION WORK  ===============================================*/
@@ -270,9 +261,6 @@ link:focus {
 .team-text {
   text-align: center;
 }
-.team-img {
-  /* margin-bottom: 32px; */
-}
 .team {
   background-color: var(--team-bgcolor);
   padding-bottom: 120px;
@@ -296,7 +284,9 @@ link:focus {
 .footer-container {
   width: 264px;
 }
-
+.footer .logo {
+  margin-right: 0;
+}
 .footer-logo {
   color: var(--team-bgcolor);
 }
@@ -308,34 +298,34 @@ link:focus {
   padding-bottom: 120px;
 }
 .filter-item:not(:last-child) {
-  margin: 24px;
+  margin-right: 24px;
 }
 .filter-button {
   padding: 12px 24px;
   min-height: 48px;
-  border: none;
+  border: 1px solid #e7e9fc;
   border-radius: 4px;
   color: var(--pr_brand-color);
   background-color: var(--team-bgcolor);
-  cursor: pointer;
-}
-.filter-button:hover,
-.filter-button:focus {
-  color: var(--accent-color);
-}
-.filter-button:active {
-  color: #fff;
-  background-color: var(--accent-color);
 }
 .filter-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 72px;
 }
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
+  color: var(--wite-color);
+  background-color: var(--accent-color);
+}
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 48px 24px;
+  margin-bottom: 72px;
 }
 .project-description {
   padding: 32px 0 32px 16px;
@@ -345,4 +335,5 @@ link:focus {
   border-color: #e7e9fc;
 }
 .project-item {
+  flex-basis: calc((100% - 24 * 2) / 3);
 }
