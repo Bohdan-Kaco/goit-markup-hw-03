@@ -48,10 +48,10 @@ img {
   text-decoration: none;
   color: inherit;
 }
-.link:hover,
+/* .link:hover,
 .link:focus {
   color: var(--accent-color);
-}
+} */
 
 /* COMPONENTS====================================== */
 
@@ -153,6 +153,10 @@ img {
 }
 .logo {
   margin-right: 76px;
+}
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
 }
 .header-logo {
   color: var(--title-color);
@@ -264,6 +268,7 @@ img {
 .team {
   background-color: var(--team-bgcolor);
   padding-bottom: 120px;
+  padding-top: 120px;
 }
 .team-card-description {
   padding: 32px 16px;
@@ -325,7 +330,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
-  margin-bottom: 72px;
 }
 .project-description {
   padding: 32px 0 32px 16px;
