@@ -48,10 +48,6 @@ img {
   text-decoration: none;
   color: inherit;
 }
-/* .link:hover,
-.link:focus {
-  color: var(--accent-color);
-} */
 
 /* COMPONENTS====================================== */
 
@@ -100,8 +96,6 @@ img {
   color: var(--title-color);
 }
 
-/* COMPONENTS====================================== */
-
 /* HEDER ========================================= */
 
 .page-header {
@@ -123,7 +117,7 @@ img {
 
 /* MENU ========================================= */
 
-.menu-list /*link*/ {
+.menu-list {
   font-weight: 500;
 }
 .menu-link:hover,
